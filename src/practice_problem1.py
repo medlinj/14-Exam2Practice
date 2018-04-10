@@ -367,8 +367,7 @@ class Box(object):
         #    TIME ESTIMATE:   5 minutes.
         # --------------------------------------------------------------
 
-        self.contents = self.original_contents
-        self.volume = self.original_volume
+        self.contents = 
 
 
     def steal(self, other_box):
