@@ -2,8 +2,8 @@
 PRACTICE Test 2, practice_problem 2.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and JD Medlin.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -42,7 +42,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4 reasonable   ** tests.
     #
@@ -55,6 +55,27 @@ def run_test_practice_problem2a():
     print('--------------------------------------------------')
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
+
+    expected = [8, 16, 11, -14, 14]
+    actual = practice_problem2a([2, 10, 5, -20, 8], 6)
+    print('Expected:', expected)
+    print('Actual:', actual)
+
+
+    expected = [1, 2, 3, 4, 5]
+    actual = practice_problem2a([0, 1, 2, 3, 4], 1)
+    print('Expected:', expected)
+    print('Actual:', actual)
+
+    expected = [5, 6, 7, 8, 9]
+    actual = practice_problem2a([0, 1, 2, 3, 4], 5)
+    print('Expected:', expected)
+    print('Actual:', actual)
+
+    expected = [9, 10, 11, 12, 13]
+    actual = practice_problem2a([10, 11, 12, 13, 14], -1)
+    print('Expected:', expected)
+    print('Actual:', actual)
 
 
 def practice_problem2a(sequence, delta):
@@ -76,13 +97,17 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ####################################################################
+    x = []
+    for k in range(len(sequence)):
+        x = x + [sequence[k] + delta]
+    return x
 
 
 def run_test_practice_problem2b():
@@ -177,6 +202,11 @@ def practice_problem2b(sequence):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
+    word = ''
+    for k in range(len(sequence)):
+        word = sequence[0] + word
+
+    return word
 
 
 # ----------------------------------------------------------------------
