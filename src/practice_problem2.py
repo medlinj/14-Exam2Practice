@@ -205,7 +205,6 @@ def practice_problem2b(sequence):
     word = ''
     for k in range(len(sequence)):
         word = sequence[0] + word
-
     return word
 
 
