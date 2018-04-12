@@ -61,7 +61,6 @@ def run_test_practice_problem2a():
     print('Expected:', expected)
     print('Actual:', actual)
 
-
     expected = [1, 2, 3, 4, 5]
     actual = practice_problem2a([0, 1, 2, 3, 4], 1)
     print('Expected:', expected)
@@ -195,7 +194,7 @@ def practice_problem2b(sequence):
       :type sequence [str]
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -204,7 +203,11 @@ def practice_problem2b(sequence):
     ####################################################################
     word = ''
     for k in range(len(sequence)):
-        word = sequence[0] + word
+        s = sequence[k]
+        if s == '':
+            word = word + ''
+        else:
+            word = word + s[0]
     return word
 
 
